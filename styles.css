@@ -1,0 +1,115 @@
+/* CSS reset */
+body {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("Bg.jpg");
+  font-family: "Ubuntu", sans-serif;
+}
+.left {
+  position: absolute;
+  left: 34px;
+  top: 11px;
+  display: inline-block;
+  width: 110px;
+  /* border: 2px solid red; */
+  height: 115px;
+}
+.left img {
+  width: 70px;
+  margin-left: 27px;
+}
+.left div {
+  text-align: center;
+}
+.mid {
+  display: block;
+  width: 50%;
+  margin: 12px auto;
+  /* border: 2px solid red; */
+  margin-left: 258px;
+}
+.right {
+  position: absolute;
+  right: 34px;
+  top: 11px;
+  display: inline-block;
+  /* border: 2px solid red; */
+}
+.navbar {
+  display: inline-block;
+  margin-left: 36px;
+}
+.navbar li {
+  color: white;
+  display: inline-block;
+}
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 26px;
+}
+.navbar li a:hover,
+.navbar li a:active {
+  text-decoration: underline;
+  color: gray;
+}
+#btn {
+  margin: 0px 9px;
+  background-color: black;
+  color: white;
+  padding: 4px 14px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  height: 65px;
+}
+#btn:hover {
+  background-color: rgb(49, 47, 47);
+}
+.container {
+    /* border: 2px solid green; */
+    border: 2px solid white;
+    margin: 105px 81px;
+    padding: 40px 30px;
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 330px;
+    margin-top: 70px;
+}
+.form-group input{
+    text-align: center;
+    display: block;
+    width: 410px;
+    padding: 4px;
+    border: 2px solid black;
+    margin: 3px auto;
+    font-size: 22px;
+    border-radius: 23px;
+}
+.container h1{
+    text-align: center;
+}
+.container h1{
+    color: rgb(255, 255, 4);
+}
+.btn{
+    display: block;
+    width: 23%;
+    margin: auto;
+   
+  background-color: black;
+  color: white;
+  padding: 4px 14px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  height: 65px;
+  margin-top: 15px;
+}
+.btn:hover{
+    background-color: gray;
+}
