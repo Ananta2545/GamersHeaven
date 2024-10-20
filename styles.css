@@ -1,114 +1,211 @@
 /* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   color: white;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   background-image: url("Bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
+  line-height: 1.6;
 }
+
+/* Left logo section */
 .left {
   position: absolute;
   left: 34px;
   top: 11px;
   display: inline-block;
   width: 110px;
-  /* border: 2px solid red; */
   height: 115px;
-}
-.left img {
-  width: 70px;
-  margin-left: 27px;
-}
-.left div {
   text-align: center;
 }
-.mid {
-  display: block;
-  width: 50%;
-  margin: 12px auto;
-  /* border: 2px solid red; */
-  margin-left: 258px;
+
+.left img {
+  width: 70px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
+
+.left img:hover {
+  transform: scale(1.1);
+}
+
+.left div {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Middle section */
+.mid {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
 .right {
   position: absolute;
   right: 34px;
   top: 11px;
   display: inline-block;
-  /* border: 2px solid red; */
 }
+
 .navbar {
-  display: inline-block;
-  margin-left: 36px;
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 50px;
+  list-style-type: none;
 }
+
 .navbar li {
-  color: white;
   display: inline-block;
+  margin: 0 15px;
 }
+
 .navbar li a {
   color: white;
   text-decoration: none;
-  padding: 20px;
-  font-size: 26px;
-}
-.navbar li a:hover,
-.navbar li a:active {
-  text-decoration: underline;
-  color: gray;
-}
-#btn {
-  margin: 0px 9px;
-  background-color: black;
-  color: white;
-  padding: 4px 14px;
-  border: 2px solid gray;
-  border-radius: 10px;
+  padding: 10px 20px;
   font-size: 20px;
-  cursor: pointer;
-  height: 65px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
 }
-#btn:hover {
-  background-color: rgb(49, 47, 47);
-}
-.container {
-    /* border: 2px solid green; */
-    border: 2px solid white;
-    margin: 105px 81px;
-    padding: 40px 30px;
-    width: 40%;
-    border-radius: 10px;
-    margin-left: 330px;
-    margin-top: 70px;
-}
-.form-group input{
-    text-align: center;
-    display: block;
-    width: 410px;
-    padding: 4px;
-    border: 2px solid black;
-    margin: 3px auto;
-    font-size: 22px;
-    border-radius: 23px;
-}
-.container h1{
-    text-align: center;
 
-    color: rgb(255, 110, 110);
+.navbar li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d3d3d3;
+  text-decoration: underline;
 }
-.btn{
-    display: block;
-    width: 23%;
-    margin: auto;
-   
-  background-color: black;
+
+/* Button styling */
+#btn {
+  background-color: #1a1a1a;
   color: white;
-  padding: 4px 14px;
+  padding: 10px 20px;
   border: 2px solid gray;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 30px;
+  font-size: 18px;
   cursor: pointer;
-  height: 65px;
-  margin-top: 15px;
+  transition: all 0.3s ease;
 }
-.btn:hover{
-    background-color: gray;
+
+#btn:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* Form container */
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 100px auto;
+  padding: 40px;
+  width: 40%;
+  border-radius: 15px;
+  border: 2px solid white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-out;
+}
+
+.container h1 {
+  text-align: center;
+  color: #ff6e6e;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+
+.form-group input {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  margin: 10px auto;
+  font-size: 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #ff6e6e;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 110, 110, 0.5);
+}
+
+/* Button styles */
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px;
+  border: 2px solid gray;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+      width: 80%;
+      padding: 20px;
+  }
+
+  .navbar li a {
+      font-size: 18px;
+  }
+
+  #btn {
+      height: auto;
+      font-size: 16px;
+      padding: 12px 18px;
+  }
+
+  .btn {
+      width: 100%;
+      height: auto;
+      font-size: 16px;
+      padding: 12px 18px;
+  }
 }
